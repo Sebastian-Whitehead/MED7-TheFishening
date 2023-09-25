@@ -28,7 +28,7 @@ public class BoidCohesionBehaviour : MonoBehaviour
         foreach(var boid in boids.Where(b => b != boid)) {
             var diff = boid.transform.position - this.transform.position;
             if (diff.magnitude < radius) {
-                average += boid.velocity;
+                average += diff;
                 found += 1;
             }
         }
