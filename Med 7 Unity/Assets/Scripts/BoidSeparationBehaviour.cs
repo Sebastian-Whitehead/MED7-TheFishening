@@ -5,12 +5,13 @@ using System.Linq;
 
 [RequireComponent(typeof(Boid))]
 
-public class BoidCohesionBehaviour : MonoBehaviour
+public class BoidSeparationBehaviour : MonoBehaviour
 {
     private Boid boid;
 
-    public float radius;
-    
+    public float radius; // This should probably be smaller than the radius used by 'Cohesion' and 'Alignment'
+    public float repulsionForce;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -37,7 +38,7 @@ public class BoidCohesionBehaviour : MonoBehaviour
         // If the average is very far away we want to move with more velocity or if objects around are close it moves with less
         if (found > 0) {
             average = average / found;
-            boid.velocity += Vector3.Lerp(Vector3.zero, average, average.magnitude / radius);
+            boid.velocity -= Vector3.Lerp(Vector3.zero, average, average.magnitude / radius) * repulsionForce; // Same as 'Cohesion' but opposite
         }
     }
 }
