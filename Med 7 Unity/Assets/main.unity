@@ -562,6 +562,33 @@ MonoBehaviour:
   m_PointlightHDType: 0
   m_SpotLightShape: 0
   m_AreaLightShape: 0
+--- !u!54 &1611826883
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6223112262199673732}
+  serializedVersion: 4
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &1970859316
 GameObject:
   m_ObjectHideFlags: 0
@@ -578,7 +605,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1970859317
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -622,6 +649,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Example Fish
+      objectReference: {fileID: 0}
+    - target: {fileID: 7943147023150227519, guid: da54f428d59126943a514193678ef50a,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.336
       objectReference: {fileID: 0}
     - target: {fileID: 8836537021194834221, guid: da54f428d59126943a514193678ef50a,
         type: 3}
@@ -676,8 +708,18 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 5518803166985734437, guid: da54f428d59126943a514193678ef50a,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1611826883}
   m_SourcePrefab: {fileID: 100100000, guid: da54f428d59126943a514193678ef50a, type: 3}
+--- !u!1 &6223112262199673732 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5518803166985734437, guid: da54f428d59126943a514193678ef50a,
+    type: 3}
+  m_PrefabInstance: {fileID: 1930449519199537825}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
