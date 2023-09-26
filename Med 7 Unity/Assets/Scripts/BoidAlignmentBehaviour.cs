@@ -28,15 +28,15 @@ public class BoidAlignmentBehaviour : MonoBehaviour
         foreach(var boid in boids.Where(b => b != boid)) {
             var diff = boid.transform.position - this.transform.position;
             if (diff.magnitude < radius) {
-                average += diff;
+                average += boid.velocity; // Not diff like in 'Cohesion'
                 found += 1;
             }
         }
 
-        // If the average is very far away we want to move with more velocity or if objects around are close it moves with less
+        // Try to match average velocity
         if (found > 0) {
             average = average / found;
-            boid.velocity += Vector3.Lerp(Vector3.zero, average, average.magnitude / radius);
+            boid.velocity += Vector3.Lerp(boid.velocity, average, Time.deltaTime); // Might not be mathematically correct!
         }
     }
 }

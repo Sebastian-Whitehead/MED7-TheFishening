@@ -5,6 +5,9 @@ using UnityEngine.Rendering;
 
 public class Boid : MonoBehaviour
 {
+    // We are using physical definitions for velocity and speed.
+    // Velocity is a vector and therefore it has magnitude and direction
+    // Speed is a scalar and is equal to the magnitude of the velocity
     public Vector3 velocity;
     public float maxVelocity;
     // Start is called before the first frame update
