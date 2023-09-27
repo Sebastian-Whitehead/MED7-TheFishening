@@ -387,9 +387,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   leadingPoint: {fileID: 5518803166985734437}
-  baseSpeed: 2.5
-  swingAngle: 15
-  smoothFactor: 0.05
+  baseRotationSpeed: 1
+  maxSwingAngle: 15
+  accelerationSmoothingFactor: 0.05
+  rotationAdjustment: {x: 0, y: -90, z: 90}
+  slerpSpeedFactor: 1
 --- !u!1 &6403280159710665676
 GameObject:
   m_ObjectHideFlags: 0

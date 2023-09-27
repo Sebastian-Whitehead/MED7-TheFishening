@@ -10,6 +10,9 @@ public class Boid : MonoBehaviour
     // Speed is a scalar and is equal to the magnitude of the velocity
     public Vector3 velocity;
     public float maxVelocity;
+    public float rotSpeed = 1;
+    
+    
     // Start is called before the first frame update
     void Start()
     {
@@ -23,8 +26,10 @@ public class Boid : MonoBehaviour
         if (velocity.magnitude > maxVelocity) {
             velocity = velocity.normalized * maxVelocity;
         }
-
+        
         this.transform.position += velocity * Time.deltaTime; // Move X (velocity) units every second
-        this.transform.rotation = Quaternion.LookRotation(velocity); //Move the way it's looking
+        
+        var currentRot = this.transform.rotation;
+        this.transform.rotation = Quaternion.Slerp(currentRot, Quaternion.LookRotation(velocity), Time.deltaTime * rotSpeed); //Move the way it's looking
     }
 }
