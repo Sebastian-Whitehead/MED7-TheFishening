@@ -323,7 +323,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 1435766507}
+  m_Father: {fileID: 2134212526}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &338949619
 MonoBehaviour:
@@ -529,7 +529,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
-    m_AddedGameObjects: []
+    m_AddedGameObjects:
+    - targetCorrespondingSourceObject: {fileID: 6915064495845052077, guid: 3f5529d295c22724a889093541c603a7,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 338949618}
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3f5529d295c22724a889093541c603a7, type: 3}
 --- !u!1 &644857814
@@ -779,8 +783,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   prefab: {fileID: 6323360288626415196, guid: 3f5529d295c22724a889093541c603a7, type: 3}
-  radius: 50
-  number: 20
+  radius: 100
+  number: 50
 --- !u!4 &774617215
 Transform:
   m_ObjectHideFlags: 0
@@ -825,7 +829,6 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 338949618}
   - {fileID: 774617215}
   - {fileID: 314109054}
   - {fileID: 2134212526}
