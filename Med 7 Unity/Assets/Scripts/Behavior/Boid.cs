@@ -11,6 +11,7 @@ public class Boid : MonoBehaviour
     public Vector3 velocity;
     public float maxVelocity;
     public float rotSpeed = 1;
+    public int id;
     
     
     // Start is called before the first frame update
