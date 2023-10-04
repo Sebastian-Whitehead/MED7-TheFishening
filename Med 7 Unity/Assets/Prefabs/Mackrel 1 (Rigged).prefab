@@ -545,8 +545,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   velocity: {x: 1, y: 0, z: 0}
-  maxVelocity: 10
+  maxVelocity: 1
   rotSpeed: 1
+  id: 0
 --- !u!114 &4245317182350343460
 MonoBehaviour:
   m_ObjectHideFlags: 0
