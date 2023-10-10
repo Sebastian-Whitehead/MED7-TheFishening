@@ -8,7 +8,6 @@ using System.Linq;
 public class BoidAlignmentBehaviour : MonoBehaviour
 {
     private Boid _boid;
-    private List<Boid> _boids;
 
     public float radius;
 
@@ -16,26 +15,24 @@ public class BoidAlignmentBehaviour : MonoBehaviour
     void Start()
     {
         _boid = GetComponent<Boid>();
-        _boids = new List<Boid>(FindObjectsOfType<Boid>());
-        
-        // Prune boids list of all fish of different id
-        _boids.RemoveAll(boid => boid.id != _boid.id);
-        
-        print(_boid.id + " : ");
-        foreach (var boid in _boids)
-        {
-            print("    " + boid.id);
-        }
     }
 
     // Update is called once per frame
     void Update()
-    { 
+    {
+        // This finds every boid for every frame for every scene, and will probably be on multiple components. NOT OPTIMAL!
+        List<Boid> boids = new List<Boid>(FindObjectsOfType<Boid>());
         var average = Vector3.zero;
         var found = 0;
 
+        // Prune boids list of all fish of different id
+        foreach (var boid in boids.Where(boid => boid.id != _boid.id))
+        {
+            boids.Remove(boid);
+        }
+
         // Find additional vector (to other objects) add the difference, the normal of difference is direction of movement
-        foreach(var boid in _boids.Where(b => b != _boid)) {
+        foreach(var boid in boids.Where(b => b != _boid)) {
             var diff = boid.transform.position - this.transform.position;
             if (diff.magnitude < radius) {
                 average += boid.velocity; // Not diff like in 'Cohesion' and 'Separation'
