@@ -129,7 +129,7 @@ MonoBehaviour:
     m_Value: 50
   meanFreePath:
     m_OverrideState: 1
-    m_Value: 10
+    m_Value: 8
   enableVolumetricFog:
     m_OverrideState: 1
     m_Value: 1
@@ -204,13 +204,13 @@ MonoBehaviour:
   active: 1
   type:
     m_OverrideState: 1
-    m_Value: 0
+    m_Value: 8
   intensity:
     m_OverrideState: 1
-    m_Value: 0.318
+    m_Value: 0.733
   response:
     m_OverrideState: 1
-    m_Value: 0.312
+    m_Value: 0.325
   texture:
     m_OverrideState: 0
     m_Value: {fileID: 0}

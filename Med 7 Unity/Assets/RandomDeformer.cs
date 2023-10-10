@@ -20,6 +20,7 @@ public class RandomDeformer : MonoBehaviour
     {
         Random.InitState((int)randomSeed);
         DeformPlane();
+        UpdateMeshCollider();
     }
 
     private void DeformPlane()
@@ -33,5 +34,14 @@ public class RandomDeformer : MonoBehaviour
 
         meshFilter.mesh.vertices = deformedVertices;
         meshFilter.mesh.RecalculateNormals();
+    }
+
+    private void UpdateMeshCollider()
+    {
+        MeshCollider meshCollider = GetComponent<MeshCollider>();
+        if (meshCollider != null)
+        {
+            meshCollider.sharedMesh = meshFilter.mesh;
+        }
     }
 }
