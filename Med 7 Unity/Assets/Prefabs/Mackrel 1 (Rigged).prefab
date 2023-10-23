@@ -79,7 +79,7 @@ MonoBehaviour:
   m_Data:
     m_ConstrainedObject: {fileID: 2255701694449266430}
     m_Source: {fileID: 1432095244545891860}
-    m_DampPosition: 0.2
+    m_DampPosition: 0.05
     m_DampRotation: 0.3
     m_MaintainAim: 0
 --- !u!1 &1952604501215484660
@@ -139,7 +139,7 @@ Transform:
   m_GameObject: {fileID: 2116337178545857959}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0.7071068, w: 0.7071068}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 7, z: 0}
   m_LocalScale: {x: 100, y: 100, z: 100}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -349,8 +349,8 @@ MonoBehaviour:
   m_Data:
     m_ConstrainedObject: {fileID: 1084661855675020741}
     m_Source: {fileID: 2350487877333144694}
-    m_DampPosition: 0.2
-    m_DampRotation: 0.3
+    m_DampPosition: 0.1
+    m_DampRotation: 0.8
     m_MaintainAim: 0
 --- !u!1 &7490224740526132851
 GameObject:
@@ -428,11 +428,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1b37cffab30b939469bac076fdd82c59, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Weight: 0.7
+  m_Weight: 0.8
   m_Data:
     m_ConstrainedObject: {fileID: 2350487877333144694}
     m_Source: {fileID: 2255701694449266430}
-    m_DampPosition: 0.2
+    m_DampPosition: 0.05
     m_DampRotation: 0.3
     m_MaintainAim: 0
 --- !u!1 &8321459863331638081
@@ -469,8 +469,8 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.22, y: 0.22, z: 0.22}
-  m_ConstrainProportionsScale: 1
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1432095244545891860}
   - {fileID: 8489227196476826775}
@@ -531,7 +531,7 @@ MonoBehaviour:
   maxSwingAngle: 15
   accelerationSmoothingFactor: 0.1
   rotationAdjustment: {x: 0, y: -90, z: 90}
-  slerpSpeedFactor: 1
+  slerpSpeedFactor: 0.05
 --- !u!114 &1307108480835536412
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -545,7 +545,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   velocity: {x: 1, y: 0, z: 0}
-  maxVelocity: 3
+  maxVelocity: 5
   rotSpeed: 1
   id: 0
 --- !u!114 &4245317182350343460
@@ -697,12 +697,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1b37cffab30b939469bac076fdd82c59, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Weight: 0.7
+  m_Weight: 0.4
   m_Data:
     m_ConstrainedObject: {fileID: 2885086700294109724}
     m_Source: {fileID: 4668478431781737319}
-    m_DampPosition: 0.2
-    m_DampRotation: 0.3
+    m_DampPosition: 0.1
+    m_DampRotation: 0.8
     m_MaintainAim: 0
 --- !u!1 &9184056343206476539
 GameObject:
@@ -748,10 +748,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1b37cffab30b939469bac076fdd82c59, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Weight: 0.7
+  m_Weight: 0.5
   m_Data:
     m_ConstrainedObject: {fileID: 4668478431781737319}
     m_Source: {fileID: 1084661855675020741}
-    m_DampPosition: 0.2
-    m_DampRotation: 0.3
+    m_DampPosition: 0.1
+    m_DampRotation: 0.8
     m_MaintainAim: 0

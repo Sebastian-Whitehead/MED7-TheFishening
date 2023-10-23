@@ -26,10 +26,7 @@ public class BoidCohesionBehaviour : MonoBehaviour
         var found = 0;
         
         // Prune boids list of all other types of fish
-        foreach (var boid in boids.Where(boid => boid.id != _boid.id))
-        {
-            boids.Remove(boid);
-        }
+        boids.RemoveAll(boid => boid.id != _boid.id);
         
         // Find additional vector (to other objects) add the difference, the normal of difference is direction of movement
         foreach(var boid in boids.Where(b => b != _boid)) {
