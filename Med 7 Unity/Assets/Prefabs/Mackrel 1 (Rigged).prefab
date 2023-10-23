@@ -452,6 +452,7 @@ GameObject:
   - component: {fileID: 1744289073191152151}
   - component: {fileID: 5192433536954375538}
   - component: {fileID: 3916926933940964165}
+  - component: {fileID: 364780421841661695}
   m_Layer: 0
   m_Name: Mackrel 1 (Rigged)
   m_TagString: Untagged
@@ -527,8 +528,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   leadingPoint: {fileID: 2116337178545857959}
-  baseRotationSpeed: 0.35
-  maxSwingAngle: 15
+  baseRotationSpeed: 0.5
+  maxSwingAngle: 10
   accelerationSmoothingFactor: 0.1
   rotationAdjustment: {x: 0, y: -90, z: 90}
   slerpSpeedFactor: 0.05
@@ -602,6 +603,33 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   radius: 50
   boundingForce: 0.5
+--- !u!54 &364780421841661695
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8321459863331638081}
+  serializedVersion: 4
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 0
+  m_IsKinematic: 1
+  m_Interpolate: 1
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &8391508241127870668
 GameObject:
   m_ObjectHideFlags: 0

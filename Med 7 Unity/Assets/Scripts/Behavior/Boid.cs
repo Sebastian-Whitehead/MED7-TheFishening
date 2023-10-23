@@ -13,24 +13,25 @@ public class Boid : MonoBehaviour
     public float rotSpeed = 1;
     public int id;
     
-    
-    // Start is called before the first frame update
+    private Rigidbody rb;
+
     void Start()
     {
+        rb = GetComponent<Rigidbody>();
         velocity = this.transform.forward * maxVelocity;
     }
 
-    // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
         // Clamp maximum velocity to a set cap to prevent infinite acceleration
         if (velocity.magnitude > maxVelocity) {
             velocity = velocity.normalized * maxVelocity;
         }
         
-        this.transform.position += velocity * Time.deltaTime; // Move X (velocity) units every second
+        Vector3 newPosition = transform.position + velocity * Time.fixedDeltaTime; // Move X (velocity) units every second
+        rb.MovePosition(newPosition);
         
-        var currentRot = this.transform.rotation;
-        this.transform.rotation = Quaternion.Slerp(currentRot, Quaternion.LookRotation(velocity), Time.deltaTime * rotSpeed); //Move the way it's looking
+        Quaternion newRotation = Quaternion.Slerp(rb.rotation, Quaternion.LookRotation(velocity), Time.fixedDeltaTime * rotSpeed); //Move the way it's looking
+        rb.MoveRotation(newRotation);
     }
 }
