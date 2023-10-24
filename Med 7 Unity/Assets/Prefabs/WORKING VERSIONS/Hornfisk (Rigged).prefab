@@ -270,7 +270,7 @@ MonoBehaviour:
   baseRotationSpeed: 0.5
   maxSwingAngle: 10
   accelerationSmoothingFactor: 0.1
-  rotationAdjustment: {x: 0, y: -90, z: 0}
+  rotationAdjustment: {x: 0, y: -90, z: 90}
   slerpSpeedFactor: 0.05
 --- !u!114 &2720672809340467612
 MonoBehaviour:
@@ -342,6 +342,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   radius: 50
   boundingForce: 0.5
+  centerPoint: {x: 0, y: 0, z: 0}
 --- !u!54 &9004572539337485349
 Rigidbody:
   m_ObjectHideFlags: 0
