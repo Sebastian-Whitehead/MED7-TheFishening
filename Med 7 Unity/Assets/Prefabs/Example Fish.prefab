@@ -311,6 +311,7 @@ GameObject:
   - component: {fileID: 8836537021194834221}
   - component: {fileID: 8902570476415350087}
   - component: {fileID: 5023574008470589715}
+  - component: {fileID: 4191280843253987955}
   m_Layer: 0
   m_Name: Example Fish
   m_TagString: Untagged
@@ -373,6 +374,24 @@ MonoBehaviour:
   - m_Rig: {fileID: 7326131142540225984}
     m_Active: 1
   m_Effectors: []
+--- !u!114 &4191280843253987955
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6318422745437661922}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e9faa8d470790a1478bcaadbd16fab1c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  leadingPoint: {fileID: 5518803166985734437}
+  baseRotationSpeed: 1
+  maxSwingAngle: 15
+  accelerationSmoothingFactor: 0.05
+  rotationAdjustment: {x: 0, y: -90, z: 90}
+  slerpSpeedFactor: 1
 --- !u!1 &6403280159710665676
 GameObject:
   m_ObjectHideFlags: 0
