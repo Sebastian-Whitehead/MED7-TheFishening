@@ -531,7 +531,7 @@ MonoBehaviour:
   baseRotationSpeed: 0.5
   maxSwingAngle: 10
   accelerationSmoothingFactor: 0.1
-  rotationAdjustment: {x: 0, y: -90, z: 90}
+  rotationAdjustment: {x: 0, y: -90, z: 0}
   slerpSpeedFactor: 0.05
 --- !u!114 &1307108480835536412
 MonoBehaviour:
