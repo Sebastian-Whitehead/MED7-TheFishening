@@ -18,7 +18,7 @@ public class BoidCohesionBehaviour : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
         // This finds every boid for every frame for every scene, and will probably be on multiple components. NOT OPTIMAL!
         List<Boid> boids = new List<Boid>(FindObjectsOfType<Boid>());

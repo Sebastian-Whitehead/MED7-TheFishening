@@ -15,11 +15,11 @@ public class BoidBoundingBehaviour : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
         // If position is out of bounds move boids towards (0.0.0)
         if(boid.transform.position.magnitude > radius){
-            boid.velocity += this.transform.position.normalized * (radius - boid.transform.position.magnitude) * boundingForce * Time.deltaTime;
+            boid.velocity += this.transform.position.normalized * ((radius - boid.transform.position.magnitude) * boundingForce * Time.deltaTime);
         }
     }
 }

@@ -12,7 +12,6 @@ public class Boid : MonoBehaviour
     public float maxVelocity;
     public float rotSpeed = 1;
     public int id;
-    
     private Rigidbody rb;
 
     void Start()
