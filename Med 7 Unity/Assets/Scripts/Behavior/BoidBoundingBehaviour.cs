@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using UnityEngine;
 
 [RequireComponent(typeof(Boid))]
-[RequireComponent(typeof(Boid))]
 public class BoidBoundingBehaviour : MonoBehaviour
 {
     private Boid boid;
