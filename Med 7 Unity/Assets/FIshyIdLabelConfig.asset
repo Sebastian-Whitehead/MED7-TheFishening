@@ -12,6 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2f09f279848e42cea259348b13bce4c5, type: 3}
   m_Name: FIshyIdLabelConfig
   m_EditorClassIdentifier: 
-  m_LabelEntries: []
+  m_LabelEntries:
+  - label: Fish
+    id: 0
+    hierarchyRelation: 0
   autoAssignIds: 1
-  startingLabelId: 1
+  startingLabelId: 0

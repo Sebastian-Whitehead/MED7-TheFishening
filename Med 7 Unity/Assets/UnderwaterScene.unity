@@ -24,7 +24,7 @@ RenderSettings:
   m_AmbientEquatorColor: {r: 0.114, g: 0.125, b: 0.133, a: 1}
   m_AmbientGroundColor: {r: 0.047, g: 0.043, b: 0.035, a: 1}
   m_AmbientIntensity: 1
-  m_AmbientMode: 0
+  m_AmbientMode: 4
   m_SubtractiveShadowColor: {r: 0.42, g: 0.478, b: 0.627, a: 1}
   m_SkyboxMaterial: {fileID: 0}
   m_HaloStrength: 0.5
@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 262.38358, g: 325.10843, b: 430.30963, a: 1}
+  m_IndirectSpecularColor: {r: 261.80283, g: 324.33078, b: 429.25055, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -182,6 +182,70 @@ Transform:
   m_Children: []
   m_Father: {fileID: 836463222}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &148643713
+GameObject:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 148643715}
+  - component: {fileID: 148643714}
+  m_Layer: 0
+  m_Name: _PerceptionSettings
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &148643714
+MonoBehaviour:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 148643713}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c5ee903ff896bde4bb82aed4aec2bf61, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  consumerEndpoint:
+    rid: 2619924600119099397
+  accumulationSettings:
+    rid: 2619924600119099398
+  references:
+    version: 2
+    RefIds:
+    - rid: 2619924600119099397
+      type: {class: SoloEndpoint, ns: UnityEngine.Perception.GroundTruth.Consumers,
+        asm: Unity.Perception.Runtime}
+      data:
+        soloDatasetName: solo
+    - rid: 2619924600119099398
+      type: {class: AccumulationSettings, ns: UnityEngine.Perception.Settings, asm: Unity.Perception.Runtime}
+      data:
+        accumulationSamples: 256
+        shutterInterval: 0
+        shutterFullyOpen: 0
+        shutterBeginsClosing: 1
+        adaptFixedLengthScenarioFrames: 1
+--- !u!4 &148643715
+Transform:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 148643713}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &179083117
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -304,7 +368,7 @@ GameObject:
   - component: {fileID: 527737051}
   m_Layer: 0
   m_Name: Sphere
-  m_TagString: Avoid
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -699,7 +763,7 @@ GameObject:
   - component: {fileID: 1002899729}
   m_Layer: 0
   m_Name: Capsule
-  m_TagString: Avoid
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1025,7 +1089,7 @@ PrefabInstance:
     - target: {fileID: 3507355467714866519, guid: e1fcaf19505fd6544bc6813a34a47a17,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 10
+      value: -0.38
       objectReference: {fileID: 0}
     - target: {fileID: 3507355467714866519, guid: e1fcaf19505fd6544bc6813a34a47a17,
         type: 3}
@@ -1135,7 +1199,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &1177371534
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1183,7 +1247,7 @@ GameObject:
   - component: {fileID: 1432144285}
   m_Layer: 0
   m_Name: Ground
-  m_TagString: Avoid
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6272,7 +6336,7 @@ PrefabInstance:
     - target: {fileID: 3507355467714866519, guid: e1fcaf19505fd6544bc6813a34a47a17,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 10
+      value: -0.38
       objectReference: {fileID: 0}
     - target: {fileID: 3507355467714866519, guid: e1fcaf19505fd6544bc6813a34a47a17,
         type: 3}
@@ -6473,6 +6537,7 @@ GameObject:
   - component: {fileID: 2145998817}
   - component: {fileID: 2145998816}
   - component: {fileID: 2145998820}
+  - component: {fileID: 2145998821}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -6700,6 +6765,78 @@ MonoBehaviour:
   blendDistance: 0
   weight: 1
   sharedProfile: {fileID: 11400000, guid: f3481832a0736874bb9acba5b5ded84d, type: 2}
+--- !u!114 &2145998821
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2145998815}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4467405dbcbd3d64ab4363e9ae8bb813, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_CameraSensor:
+    rid: 2619924600119099392
+  m_Labelers:
+  - rid: 2619924600119099393
+  - rid: 2619924600119099394
+  - rid: 2619924600119099395
+  - rid: 2619924600119099396
+  m_LayerMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  id: camera
+  description: 
+  captureRgbImages: 1
+  firstCaptureFrame: 0
+  captureTriggerMode: 0
+  manualSensorAffectSimulationTiming: 0
+  simulationDeltaTime: 0.0166
+  framesBetweenCaptures: 0
+  showVisualizations: 1
+  alphaThreshold: 0.1
+  overrideLayerMask: 0
+  useAccumulation: 0
+  references:
+    version: 2
+    RefIds:
+    - rid: 2619924600119099392
+      type: {class: UnityCameraSensor, ns: UnityEngine.Perception.GroundTruth.Sensors,
+        asm: Unity.Perception.Runtime}
+      data:
+        superSamplingFactor: 1
+    - rid: 2619924600119099393
+      type: {class: BoundingBox2DLabeler, ns: UnityEngine.Perception.GroundTruth.Labelers,
+        asm: Unity.Perception.Runtime}
+      data:
+        enabled: 1
+        annotationId: bounding box
+        idLabelConfig: {fileID: 11400000, guid: b3dfaf550568db8468e6ae804fd395f7,
+          type: 2}
+    - rid: 2619924600119099394
+      type: {class: ObjectCountLabeler, ns: UnityEngine.Perception.GroundTruth.Labelers,
+        asm: Unity.Perception.Runtime}
+      data:
+        enabled: 0
+        objectCountMetricId: ObjectCount
+        labelConfig: {fileID: 11400000, guid: b3dfaf550568db8468e6ae804fd395f7, type: 2}
+    - rid: 2619924600119099395
+      type: {class: RenderedObjectInfoLabeler, ns: UnityEngine.Perception.GroundTruth.Labelers,
+        asm: Unity.Perception.Runtime}
+      data:
+        enabled: 1
+        objectInfoMetricId: RenderedObjectInfo
+        idLabelConfig: {fileID: 11400000, guid: b3dfaf550568db8468e6ae804fd395f7,
+          type: 2}
+    - rid: 2619924600119099396
+      type: {class: SemanticSegmentationLabeler, ns: UnityEngine.Perception.GroundTruth.Labelers,
+        asm: Unity.Perception.Runtime}
+      data:
+        enabled: 0
+        annotationId: semantic segmentation
+        labelConfig: {fileID: 11400000, guid: 2d9a1ad425478a44289787c366235640, type: 2}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
@@ -6707,3 +6844,4 @@ SceneRoots:
   - {fileID: 1744087640}
   - {fileID: 836463222}
   - {fileID: 656689300}
+  - {fileID: 148643715}
