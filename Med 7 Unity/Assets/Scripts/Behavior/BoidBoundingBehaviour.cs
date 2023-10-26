@@ -8,13 +8,20 @@ using UnityEngine;
 public class BoidBoundingBehaviour : MonoBehaviour
 {
     private Boid boid; // Reference to the Boid component attached to this GameObject
-    public GameObject boundingBoxObject; // The GameObject representing the bounding box
+
+    [Header("Bounding Settings")]
+    [Tooltip("The GameObject representing the bounding box")]
+    public GameObject boundingBoxObject;
+
     private Vector3 halfExtents; // Half the dimensions of the bounding box
 
-    // Variables for AvoidFloor
-    public float avoidFloorStrength = 5; // Factor by which the boid will avoid the floor
-    public float raycastDistance = 5; // Distance of the raycast
+    [Header("Avoid Floor Settings")]
+    [Tooltip("Factor by which the boid will avoid the floor")]
+    public float avoidFloorStrength;
 
+    [Tooltip("Distance of the raycast used to detect the floor")]
+    public float raycastDistance;
+    
     // Start is called before the first frame update
     void Start()
     {

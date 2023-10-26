@@ -2,13 +2,16 @@ using UnityEngine;
 
 public class RandomDeformer : MonoBehaviour
 {
-    public float deformAmount = 0.5f; // Amount of deformation to apply
-    public float randomSeed = 0f; // Seed for random number generation
+    [Header("Deform Settings")]
+    [Tooltip("Amount of deformation to apply")]
+    public float deformAmount;
+
+    [Tooltip("Seed for random number generation")]
+    public float randomSeed = 0f;
 
     private MeshFilter meshFilter; // Reference to the MeshFilter component
     private Vector3[] originalVertices; // Array to store the original vertices of the mesh
     private Vector3[] deformedVertices; // Array to store the deformed vertices of the mesh
-
     private void Awake()
     {
         meshFilter = GetComponent<MeshFilter>(); // Get the MeshFilter component attached to the same GameObject

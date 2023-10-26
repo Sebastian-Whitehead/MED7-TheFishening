@@ -3,11 +3,21 @@ using UnityEngine;
 
 public class ObjectSpawner : MonoBehaviour
 {
-    public List<GameObject> objectsToSpawn; // List of game objects to spawn
-    public List<int> spawnQuantities; // List of quantities for each object to spawn
-    public float maxSpread = 10f; // Maximum spread for object spawning
-    public Transform parentObject; // Reference to the empty parent object
-    public int randomSeed = 0; // Seed for random number generation
+    [Header("Spawn Settings")]
+    [Tooltip("List of game objects to spawn")]
+    public List<GameObject> objectsToSpawn;
+
+    [Tooltip("List of quantities for each object to spawn")]
+    public List<int> spawnQuantities;
+
+    [Tooltip("Maximum spread for object spawning")]
+    public float maxSpread;
+
+    [Tooltip("Reference to the empty parent object")]
+    public Transform parentObject;
+
+    [Tooltip("Seed for random number generation")]
+    public int randomSeed = 0;
 
     private void Start()
     {

@@ -22,11 +22,22 @@ using System.Threading;
 
 public class UdpSocket : MonoBehaviour
 {
-    [HideInInspector] public bool isTxStarted = false;
+    [Header("Transmission Status")]
+    [HideInInspector] 
+    public bool isTxStarted = false;
 
-    [SerializeField] string IP = "127.0.0.1"; // local host
-    [SerializeField] int rxPort = 8000; // port to receive data from Python on
-    [SerializeField] int txPort = 8001; // port to send data to Python on
+    [Header("Connection Settings")]
+    [Tooltip("IP address for the connection. Default is localhost.")]
+    [SerializeField] 
+    string IP = "127.0.0.1"; 
+
+    [Tooltip("Port to receive data from Python on.")]
+    [SerializeField] 
+    int rxPort = 8000; 
+
+    [Tooltip("Port to send data to Python on.")]
+    [SerializeField] 
+    int txPort = 8001; 
 
     int i = 0; // DELETE THIS: Added to show sending data from Unity to Python via UDP
 

@@ -9,8 +9,10 @@ public class BoidAlignmentBehaviour : MonoBehaviour
 {
     private Boid _boid;
 
+    [Header("Alignment Settings")]
+    [Tooltip("The radius within which boids will align")]
     public float radius;
-
+    
     // Start is called before the first frame update
     void Start()
     {

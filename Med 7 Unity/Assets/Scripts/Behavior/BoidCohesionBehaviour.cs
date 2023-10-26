@@ -9,6 +9,8 @@ public class BoidCohesionBehaviour : MonoBehaviour
 {
     private Boid _boid;
 
+    [Header("Cohesion Settings")]
+    [Tooltip("The radius within which boids will cohere")]
     public float radius;
     
     // Start is called before the first frame update
