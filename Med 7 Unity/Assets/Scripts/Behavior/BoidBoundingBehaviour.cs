@@ -11,7 +11,7 @@ public class BoidBoundingBehaviour : MonoBehaviour
 
     // Variables for AvoidFloor
     public float avoidFloorStrength = 5; /* factor by which fish will avoid the floor */
-    public float raycastDistance = 2; /* distance of the raycast */
+    public float raycastDistance = 5; /* distance of the raycast */
 
     // Start is called before the first frame update
     void Start()
