@@ -4,13 +4,29 @@ using System.Collections.Generic;
 using UnityEngine;
 using Random = UnityEngine.Random;
 
+[RequireComponent(typeof(BoidAlignmentBehaviour))]
+[RequireComponent(typeof(BoidBoundingBehaviour))]
+[RequireComponent(typeof(BoidCohesionBehaviour))]
+[RequireComponent(typeof(BoidSeparationBehaviour))]
+[RequireComponent(typeof(Rigidbody))]
+
 public class Boid : MonoBehaviour
 {
-    [HideInInspector] public Vector3 velocity;        // Current velocity of the boid
-    public float minVelocity;       // Minimum velocity magnitude
-    public float maxVelocity;       // Maximum velocity magnitude
-    public float rotSpeed = 1;     // Rotation speed
-    public int id;                 // Unique identifier for the boid
+    [HideInInspector] public Vector3 velocity; // Current velocity of the boid
+
+    [Header("Boid Settings")]
+    [Tooltip("Minimum velocity magnitude")]
+    public float minVelocity;
+
+    [Tooltip("Maximum velocity magnitude")]
+    public float maxVelocity;
+
+    [Tooltip("Rotation speed")]
+    public float rotSpeed = 1;
+
+    [Tooltip("Unique identifier for the boid")]
+    public int id;
+
     private Rigidbody rb;          
 
     void Start()

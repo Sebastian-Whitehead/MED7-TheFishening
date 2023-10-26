@@ -9,7 +9,11 @@ public class BoidSeparationBehaviour : MonoBehaviour
 {
     private Boid boid;
 
-    public float radius; // This should probably be smaller than the radius used by 'Cohesion' and 'Alignment'
+    [Header("Separation Settings")]
+    [Tooltip("The radius within which boids will be separated. This should probably be smaller than the radius used by 'Cohesion' and 'Alignment'")]
+    public float radius;
+
+    [Tooltip("The force with which boids repel each other")]
     public float repulsionForce;
 
     // Start is called before the first frame update
