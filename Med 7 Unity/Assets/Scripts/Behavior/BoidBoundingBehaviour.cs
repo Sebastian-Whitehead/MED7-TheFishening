@@ -9,6 +9,10 @@ public class BoidBoundingBehaviour : MonoBehaviour
     public GameObject boundingBoxObject; // The GameObject representing the bounding box
     private Vector3 halfExtents; // Half the dimensions of the bounding box
 
+    // Variables for AvoidFloor
+    public float avoidFloorStrength = 5; /* factor by which fish will avoid the floor */
+    public float raycastDistance = 2; /* distance of the raycast */
+
     // Start is called before the first frame update
     void Start()
     {
@@ -25,7 +29,40 @@ public class BoidBoundingBehaviour : MonoBehaviour
             // If position is out of bounds, move boids towards the center of the bounding box
             boid.velocity += (boundingBoxObject.transform.position - boid.transform.position) * Time.deltaTime;
         }
+
+        // Call AvoidFloor
+        AvoidFloor();
+    }
+
+    void AvoidFloor() {
+        // Cast a ray downwards from the fish
+        RaycastHit hit;
+
+         // Draw the ray in the Scene view
+        Debug.DrawRay(transform.position, Vector3.down * raycastDistance, Color.red);
+        
+        if (Physics.Raycast(transform.position, Vector3.down, out hit, raycastDistance)) {
+            // If the ray hits the sea floor
+            if (hit.collider.gameObject.CompareTag("Avoid")) {
+                // Calculate direction away from the floor
+                Vector3 awayFromFloor = transform.position - hit.point;
+
+                // Normalize the direction
+                awayFromFloor = awayFromFloor.normalized;
+
+                // Calculate distance to the floor
+                float distanceToFloor = hit.distance;
+
+                // Make avoidFloorStrength inversely proportional to distanceToFloor
+                float adjustedAvoidFloorStrength = avoidFloorStrength / distanceToFloor;
+
+                // Apply the direction to the fish's current direction
+                float deltaTimeStrength = adjustedAvoidFloorStrength * Time.deltaTime;
+                boid.velocity = boid.velocity + deltaTimeStrength * awayFromFloor / (deltaTimeStrength + 1);
+
+                // Normalize the result
+                boid.velocity = boid.velocity.normalized;
+            }
+        }
     }
 }
-
-
