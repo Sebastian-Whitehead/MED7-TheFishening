@@ -255,6 +255,7 @@ GameObject:
   - component: {fileID: 7589643432251343337}
   - component: {fileID: 8198076661410189809}
   - component: {fileID: 4269839230846902816}
+  - component: {fileID: -8100429458946453076}
   m_Layer: 0
   m_Name: Mackrel 1 (Rigged)
   m_TagString: Untagged
@@ -348,6 +349,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   velocity: {x: 1, y: 0, z: 0}
+  minVelocity: 0
   maxVelocity: 5
   rotSpeed: 1
   id: 0
@@ -403,9 +405,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d1da86d740da74b448c839bfc9b28c8e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  radius: 50
-  boundingForce: 0.5
-  centerPoint: {x: 0, y: 0, z: 0}
+  boundingBoxObject: {fileID: 0}
 --- !u!54 &4269839230846902816
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -433,6 +433,22 @@ Rigidbody:
   m_Interpolate: 1
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &-8100429458946453076
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2860303911451251659}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8b33f0bc2b78db642a758f07826d0dd0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  labels:
+  - Fish
+  useAutoLabeling: 0
+  autoLabelingSchemeType: 
 --- !u!1 &3525635845968762154
 GameObject:
   m_ObjectHideFlags: 0
