@@ -349,8 +349,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   velocity: {x: 1, y: 0, z: 0}
-  minVelocity: 0
+  minVelocity: 0.1
   maxVelocity: 5
+  slope: 0.1
   rotSpeed: 1
   id: 0
 --- !u!114 &6303553084705491540
@@ -392,7 +393,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   radius: 2
-  repulsionForce: 0.25
+  repulsionForce: 0.5
 --- !u!114 &8198076661410189809
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -406,6 +407,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   boundingBoxObject: {fileID: 0}
+  avoidFloorStrength: 0.5
+  raycastDistance: 2
 --- !u!54 &4269839230846902816
 Rigidbody:
   m_ObjectHideFlags: 0

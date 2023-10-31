@@ -20,6 +20,7 @@ public class Boid : MonoBehaviour
 
     [Tooltip("Maximum velocity magnitude")]
     public float maxVelocity;
+    public float slope = 0.1f;
 
     [Tooltip("Rotation speed")]
     public float rotSpeed = 1;
@@ -38,16 +39,26 @@ public class Boid : MonoBehaviour
 
     void FixedUpdate()
     {
-        // Interpolate velocity magnitude randomly between minVelocity and maxVelocity
-        float newSpeed = Mathf.Lerp(minVelocity, maxVelocity, Random.value);
-        velocity = velocity.normalized * newSpeed;  // Set the new velocity magnitude
+        float randomValue = Random.Range(-0.1f, 0.1f); // Generate a small random value
 
-        // Calculate the new position based on the current position, velocity, and time
+        // Get the current speed based on the adjusted velocity
+        float speed = velocity.magnitude; 
+
+        speed += slope * randomValue; // Adjust the speed
+
+        // Ensure the speed stays within a certain range (e.g., minVelocity to maxVelocity)
+        speed = Mathf.Clamp(speed, minVelocity, maxVelocity);
+
+        // Maintain the same direction but adjust the speed
+        float lerpSpeed = 10.0f; // Adjust this value to control the lerp speed
+        velocity = velocity.normalized * Mathf.Lerp(velocity.magnitude, speed, lerpSpeed);
+
         Vector3 newPosition = transform.position + velocity * Time.fixedDeltaTime; 
         rb.MovePosition(newPosition);  // Move the boid to the new position
 
-        // Calculate the new rotation by smoothly interpolating between the current rotation and the direction of velocity
         Quaternion newRotation = Quaternion.Slerp(rb.rotation, Quaternion.LookRotation(velocity), Time.fixedDeltaTime * rotSpeed);
         rb.MoveRotation(newRotation);  // Set the new rotation for the boid
     }
+
+
 }
