@@ -186,6 +186,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Reference
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 5458eea0eaa432d4da9dae6ee387e592,
+        type: 3}
+      propertyPath: m_TagString
+      value: Avoid
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1281,7 +1286,7 @@ PrefabInstance:
     - target: {fileID: 3507355467714866519, guid: e1fcaf19505fd6544bc6813a34a47a17,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.38
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 3507355467714866519, guid: e1fcaf19505fd6544bc6813a34a47a17,
         type: 3}
@@ -6541,7 +6546,7 @@ GameObject:
   - component: {fileID: 1972257966}
   m_Layer: 0
   m_Name: Cube
-  m_TagString: Untagged
+  m_TagString: Avoid
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6648,7 +6653,7 @@ PrefabInstance:
     - target: {fileID: 3507355467714866519, guid: e1fcaf19505fd6544bc6813a34a47a17,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.38
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 3507355467714866519, guid: e1fcaf19505fd6544bc6813a34a47a17,
         type: 3}
