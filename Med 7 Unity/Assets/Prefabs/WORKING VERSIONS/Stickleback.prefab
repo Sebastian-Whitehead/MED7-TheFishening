@@ -102,7 +102,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e9faa8d470790a1478bcaadbd16fab1c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  leadingPoint: {fileID: 0}
+  leadingPoint: {fileID: 7684188128240191898}
   baseRotationSpeed: 0.5
   maxSwingAngle: 10
   accelerationSmoothingFactor: 0.1
@@ -205,6 +205,7 @@ MonoBehaviour:
   velocity: {x: 1, y: 0, z: 0}
   minVelocity: 0.5
   maxVelocity: 1.75
+  slope: 0.1
   rotSpeed: 1
   id: 2
 --- !u!1 &3781452469609048740

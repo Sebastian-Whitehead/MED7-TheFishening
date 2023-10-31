@@ -16,5 +16,8 @@ MonoBehaviour:
   - label: Fish
     id: 0
     hierarchyRelation: 0
+  - label: Small_Fish
+    id: 1
+    hierarchyRelation: 0
   autoAssignIds: 1
   startingLabelId: 0
