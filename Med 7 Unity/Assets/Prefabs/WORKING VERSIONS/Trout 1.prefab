@@ -48,7 +48,7 @@ MonoBehaviour:
   m_Data:
     m_ConstrainedObject: {fileID: 4150097735242452085}
     m_Source: {fileID: 8334051904029674042}
-    m_DampPosition: 0.2
+    m_DampPosition: 0.02
     m_DampRotation: 0.3
     m_MaintainAim: 1
 --- !u!1 &792443390036791464
@@ -132,7 +132,7 @@ MonoBehaviour:
   m_Data:
     m_ConstrainedObject: {fileID: 5279140484834276062}
     m_Source: {fileID: 4120991300181079223}
-    m_DampPosition: 0.2
+    m_DampPosition: 0.02
     m_DampRotation: 0.3
     m_MaintainAim: 1
 --- !u!1 &2674975703839786347
@@ -183,7 +183,7 @@ MonoBehaviour:
   m_Data:
     m_ConstrainedObject: {fileID: 4120991300181079223}
     m_Source: {fileID: 4150097735242452085}
-    m_DampPosition: 0.2
+    m_DampPosition: 0.02
     m_DampRotation: 0.3
     m_MaintainAim: 1
 --- !u!1 &4850901014289667476
@@ -252,16 +252,16 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4990617366790158066}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
+  m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 4267418449737880473}
   - {fileID: 4243056933700355317}
   - {fileID: 5416228714869110272}
   m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
 --- !u!95 &6713165500793127557
 Animator:
   serializedVersion: 5
@@ -331,7 +331,7 @@ MonoBehaviour:
   baseRotationSpeed: 0.5
   maxSwingAngle: 10
   accelerationSmoothingFactor: 0.1
-  rotationAdjustment: {x: 0, y: -90, z: 90}
+  rotationAdjustment: {x: 0, y: 90, z: -90}
   slerpSpeedFactor: 0.7
 --- !u!114 &432826914602517949
 MonoBehaviour:
@@ -410,9 +410,9 @@ Rigidbody:
     m_Bits: 0
   m_ImplicitCom: 1
   m_ImplicitTensor: 1
-  m_UseGravity: 1
-  m_IsKinematic: 0
-  m_Interpolate: 0
+  m_UseGravity: 0
+  m_IsKinematic: 1
+  m_Interpolate: 1
   m_Constraints: 0
   m_CollisionDetection: 0
 --- !u!114 &8606776631885068828
@@ -512,7 +512,7 @@ MonoBehaviour:
   m_Data:
     m_ConstrainedObject: {fileID: 8334051904029674042}
     m_Source: {fileID: 4267418449737880473}
-    m_DampPosition: 0.2
+    m_DampPosition: 0.02
     m_DampRotation: 0.3
     m_MaintainAim: 1
 --- !u!1 &6861002417552252886
@@ -686,7 +686,7 @@ MonoBehaviour:
   m_Data:
     m_ConstrainedObject: {fileID: 7256488327958269754}
     m_Source: {fileID: 5279140484834276062}
-    m_DampPosition: 0.2
+    m_DampPosition: 0.02
     m_DampRotation: 0.3
     m_MaintainAim: 1
 --- !u!1 &8425050182261851932

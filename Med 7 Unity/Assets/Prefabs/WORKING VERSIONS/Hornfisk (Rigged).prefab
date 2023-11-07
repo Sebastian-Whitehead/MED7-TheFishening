@@ -48,7 +48,7 @@ MonoBehaviour:
   m_Data:
     m_ConstrainedObject: {fileID: 4256095682507421856}
     m_Source: {fileID: 1071530862896596039}
-    m_DampPosition: 0.2
+    m_DampPosition: 0.05
     m_DampRotation: 0.3
     m_MaintainAim: 1
 --- !u!1 &970376453437808681
@@ -210,7 +210,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -1, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.38, y: 0.38, z: 0.38}
   m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 8392249087664642875}
@@ -468,7 +468,7 @@ MonoBehaviour:
   m_Data:
     m_ConstrainedObject: {fileID: 710205307274110677}
     m_Source: {fileID: 4256095682507421856}
-    m_DampPosition: 0.2
+    m_DampPosition: 0.05
     m_DampRotation: 0.3
     m_MaintainAim: 1
 --- !u!1 &3280259377515645449
@@ -551,7 +551,7 @@ MonoBehaviour:
   m_Data:
     m_ConstrainedObject: {fileID: 228003847459281908}
     m_Source: {fileID: 710205307274110677}
-    m_DampPosition: 0.2
+    m_DampPosition: 0.05
     m_DampRotation: 0.3
     m_MaintainAim: 1
 --- !u!1 &4130966921569578059
@@ -667,7 +667,7 @@ MonoBehaviour:
   m_Data:
     m_ConstrainedObject: {fileID: 7235491388851122775}
     m_Source: {fileID: 228003847459281908}
-    m_DampPosition: 0.2
+    m_DampPosition: 0.05
     m_DampRotation: 0.3
     m_MaintainAim: 1
 --- !u!1 &8009952759147961398
@@ -769,7 +769,7 @@ MonoBehaviour:
   m_Data:
     m_ConstrainedObject: {fileID: 1071530862896596039}
     m_Source: {fileID: 8392249087664642875}
-    m_DampPosition: 0.2
+    m_DampPosition: 0.05
     m_DampRotation: 0.3
     m_MaintainAim: 1
 --- !u!1 &9104304368986315356
