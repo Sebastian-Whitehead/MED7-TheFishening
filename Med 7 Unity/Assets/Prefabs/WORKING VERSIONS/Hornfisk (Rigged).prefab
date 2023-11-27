@@ -269,7 +269,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   leadingPoint: {fileID: 970376453437808681}
   baseRotationSpeed: 0.5
-  maxSwingAngle: 10
+  maxSwingAngle: 40
   accelerationSmoothingFactor: 0.1
   rotationAdjustment: {x: 0, y: -90, z: 90}
   slerpSpeedFactor: 0.05
@@ -287,7 +287,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   velocity: {x: 1, y: 0, z: 0}
   minVelocity: 0.1
-  maxVelocity: 5
+  maxVelocity: 1
   slope: 0.1
   rotSpeed: 1
   id: 1
@@ -303,7 +303,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9f972f89a6ca61b4a8ca9257f8a77fcb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  radius: 20
+  radius: 10
 --- !u!114 &1963820283730358089
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -316,7 +316,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b84847e7e96673c40b3d577012917405, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  radius: 20
+  radius: 10
 --- !u!114 &2633878511485385206
 MonoBehaviour:
   m_ObjectHideFlags: 0
