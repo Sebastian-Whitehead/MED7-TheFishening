@@ -37,17 +37,17 @@ def merge_files(data1, data2):
         merged_categories.append(merged_category)
     merged_data['categories'] = merged_categories
 
-
-
     # Merge images
+    max_id = max(image['id'] for image in data1['images'])  # Find the maximum id in the first file
     for image in data2['images']:
-        image['id'] += 100000  # Add 100000 to all id's in the second file
+        image['id'] += max_id  # Add the maximum id from the first file to all id's in the second file
     merged_data['images'] = data1['images'] + data2['images']
 
     # Merge annotations
+    max_id = max(annotation['id'] for annotation in data1['annotations'])  # Find the maximum id in the first file
     for annotation in data2['annotations']:
-        annotation['id'] += 100000  # Add 100000 to all id's in the second file
-        annotation['image_id'] += 100000  # Add 100000 to all image_id's in the second file
+        annotation['id'] += max_id  # Add the maximum id from the first file to all id's in the second file
+        annotation['image_id'] += max_id  # Add the maximum id from the first file to all image_id's in the second file
     merged_data['annotations'] = data1['annotations'] + data2['annotations']
 
     return merged_data
@@ -69,5 +69,9 @@ merged_data = merge_files(data1, data2)
 
 # Write the merged data to a new file
 write_to_file(merged_data, 'merged_file.json')
+
+# Verification step
+image_ids = [image['id'] for image in merged_data['images']]
+assert len(image_ids) == len(set(image_ids)), "Duplicate image ids found!"
 
 print("DONE!")
