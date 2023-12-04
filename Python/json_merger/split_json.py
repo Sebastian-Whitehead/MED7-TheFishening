@@ -47,6 +47,10 @@ def split_data(data, split_ratio):
 
     return first_split, second_split
 
+def write_to_file(data, file_name):
+    with open(file_name, 'w') as f:
+        json.dump(data, f, indent=4)
+
 def copy_images(data, folder_name):
     # Create the folder if it doesn't exist
     if not os.path.exists(folder_name):
