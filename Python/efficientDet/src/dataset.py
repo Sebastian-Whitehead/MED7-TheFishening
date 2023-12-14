@@ -56,11 +56,11 @@ class CocoDataset(Dataset):
         try:
             image_info = self.coco.loadImgs(self.image_ids[image_index])[0]
             path = os.path.join(self.root_dir, 'images', self.set_name, image_info['file_name'])
-            print(f"Attempting to load image: {path}")  # Add this line
+            #print(f"Attempting to load image: {path}")  # Add this line
             img = cv2.imread(path)
             if img is not None:
                 img = cv2.cvtColor(img, cv2.COLOR_BGR2RGB)
-                print(f"Image loaded successfully: {path}")
+                #print(f"Image loaded successfully: {path}")
                 return img.astype(np.float32) / 255.
             else:
                 print(f"Warning: Unable to read image at path: {path}")

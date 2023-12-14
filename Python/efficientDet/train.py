@@ -10,7 +10,7 @@ from tensorboardX import SummaryWriter
 import shutil
 import numpy as np
 from tqdm.autonotebook import tqdm
-#RUN WITH THIS PLS DONT DO IT WITOUT I WILL CRY python train.py --resume_checkpoint C:\Users\jonas\Documents\GitHub\efficientDet\trained_models\checkpoint.pth
+#RUN WITH THIS PLS DONT DO IT WITOUT I WILL CRY python train.py --resume_checkpoint C:\Users\jonas\Documents\GitHub\MED7-TheFishening\Python\efficientDet\trained_models\checkpoint.pth
 def get_args():
     parser = argparse.ArgumentParser(
         "EfficientDet: Scalable and Efficient Object Detection implementation by Signatrix GmbH")
@@ -19,7 +19,7 @@ def get_args():
     parser.add_argument("--lr", type=float, default=1e-4)
     parser.add_argument('--alpha', type=float, default=0.25)
     parser.add_argument('--gamma', type=float, default=1.5)
-    parser.add_argument("--num_epochs", type=int, default=100)
+    parser.add_argument("--num_epochs", type=int, default=50)
     parser.add_argument("--test_interval", type=int, default=1, help="Number of epochs between testing phases")
     parser.add_argument("--es_min_delta", type=float, default=0.0,
                         help="Early stopping's parameter: minimum change loss to qualify as an improvement")
