@@ -25,3 +25,11 @@ Replace relevant paths in different scripts to match your paths.
 
 To train with GPU, go to the utils.py file line 63 for relevant instructions.
 
+# acknowledgements and references
+dataset used in this github = https://www.kaggle.com/datasets/jonasblind/brackishsgd
+
+Signatrix who did most of the work on EffecientDET = https://github.com/signatrix/efficientdet
+
+Brackish dataset = https://vap.aau.dk/the-brackish-dataset/
+
+Paper/worksheet with further instructions = TBD
