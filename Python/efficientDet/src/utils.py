@@ -57,8 +57,13 @@ class ClipBoxes(nn.Module):
         boxes[:, :, 0] = torch.clamp(boxes[:, :, 0], min=0)
         boxes[:, :, 1] = torch.clamp(boxes[:, :, 1], min=0)
 
-        boxes[:, :, 2] = torch.clamp(boxes[:, :, 2], max=width)#.to("cuda:0")
-        boxes[:, :, 3] = torch.clamp(boxes[:, :, 3], max=height)#.to("cuda:0")
+        boxes[:, :, 2] = torch.clamp(boxes[:, :, 2], max=width)
+        boxes[:, :, 3] = torch.clamp(boxes[:, :, 3], max=height)
+
+        #The lines below lines should be uncommented ONLY for training with a GPU. They have to be commented for any evaluation.
+        #If the lines below are uncommented, the two lines above should be commented, and vice versa.
+        #boxes[:, :, 2] = torch.clamp(boxes[:, :, 2], max=width.to("cuda:0"))
+        #boxes[:, :, 3] = torch.clamp(boxes[:, :, 3], max=height.to("cuda:0"))
 
         return boxes
 

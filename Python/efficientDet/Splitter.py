@@ -1,6 +1,6 @@
 import json
 import os
-import random  # Import the random module
+import random 
 from shutil import copyfile
 from pycocotools.coco import COCO
 
@@ -65,8 +65,8 @@ def split_coco_dataset(annotations_path, images_path, output_path, train_percent
         json.dump(val_dataset, val_json_file)
 
 if __name__ == "__main__":
-    annotations_path = r'C:\Users\jonas\Desktop\Data\coco\bbox.json'
-    images_path = r'C:\Users\jonas\Desktop\Data\coco\images'
-    output_path = r'C:\Users\jonas\Desktop\Data'
+    annotations_path = r'your_annotations_path'
+    images_path = r'your_images_path'
+    output_path = r'your_output_path'
 
     split_coco_dataset(annotations_path, images_path, output_path)

@@ -10,7 +10,8 @@ from tensorboardX import SummaryWriter
 import shutil
 import numpy as np
 from tqdm.autonotebook import tqdm
-#RUN WITH THIS PLS DONT DO IT WITOUT I WILL CRY python train.py --resume_checkpoint C:\Users\jonas\Documents\GitHub\MED7-TheFishening\Python\efficientDet\trained_models\checkpoint.pth
+#To continiue training after stopping use this line in the command prompt python train.py --resume_checkpoint "Path_to_checkpoint_file"
+#--IMPORTANT-- If you run train.py without making a backop of previously trained model and checkpoint, they will be overwritten and lost.
 def get_args():
     parser = argparse.ArgumentParser(
         "EfficientDet: Scalable and Efficient Object Detection implementation by Signatrix GmbH")

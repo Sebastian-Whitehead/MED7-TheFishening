@@ -12,7 +12,7 @@ def get_args():
     parser.add_argument("--cls_threshold", type=float, default=0.5)
     parser.add_argument("--nms_threshold", type=float, default=0.5)
     parser.add_argument("--pretrained_model", type=str, default="trained_models/signatrix_efficientdet_coco.pth")
-    parser.add_argument("--input", type=str, default=r"C:\Users\jonas\Documents\GitHub\efficientDet\output.mp4")
+    parser.add_argument("--input", type=str, default=r"Your_input_video")
     parser.add_argument("--output", type=str, default="test_videos/output.mp4")
 
     args = parser.parse_args()

@@ -1,6 +1,6 @@
 import os
 import json
-
+#This file removes references from the JSON file to non existing images.
 def filter_json(json_file_path, images_directory):
     # Load JSON data
     with open(json_file_path, 'r') as json_file:
@@ -27,10 +27,10 @@ def image_exists(images_directory, image_name):
 
 if __name__ == "__main__":
     # Replace 'your_data.json' with the path to your JSON file
-    json_file_path = r"C:\Users\jonas\Documents\GitHub\MED7-TheFishening\Python\efficientDet\data\COCO\Val\val2\annotations\instances_val2017.json"
+    json_file_path = r"your_data.json"
 
     # Replace 'your_images_directory' with the path to the directory containing your images
-    images_directory = r'C:\Users\jonas\Documents\GitHub\MED7-TheFishening\Python\efficientDet\data\COCO\Val\val2\images'
+    images_directory = r'your_images_directory'
 
     # Call the filter_json function
     filter_json(json_file_path, images_directory)
