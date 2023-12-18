@@ -6,20 +6,62 @@ using UnityEngine;
 public class BoidBoundingBehaviour : MonoBehaviour
 {
     private Boid boid;
-    public float radius;
-    public float boundingForce; // How hard should fish be pushed back when they reach the bounding sphere edge
-    // Start is called before the first frame update
+
+    [Header("Bounding Settings")]
+    [Tooltip("The GameObject representing the bounding box")]
+    public GameObject boundingBoxObject;
+
+    private Vector3 halfExtents;
+
+    [Header("Avoid Floor Settings")]
+    [Tooltip("Factor by which the boid will avoid the floor")]
+    public float avoidFloorStrength;
+
+    [Tooltip("Distance of the raycast used to detect the floor")]
+    public float raycastDistance;
+    
     void Start()
     {
         boid = GetComponent<Boid>();
+        halfExtents = boundingBoxObject.transform.localScale / 2;
     }
 
-    // Update is called once per frame
     void FixedUpdate()
     {
-        // If position is out of bounds move boids towards (0.0.0)
-        if(boid.transform.position.magnitude > radius){
-            boid.velocity += this.transform.position.normalized * ((radius - boid.transform.position.magnitude) * boundingForce * Time.deltaTime);
+        Vector3 localPos = boid.transform.position - boundingBoxObject.transform.position;
+
+        if (Mathf.Abs(localPos.x) > halfExtents.x || Mathf.Abs(localPos.y) > halfExtents.y || Mathf.Abs(localPos.z) > halfExtents.z)
+        {
+            boid.velocity += (boundingBoxObject.transform.position - boid.transform.position) * Time.deltaTime;
+        }
+
+        AvoidFloor();
+    }
+
+    void AvoidFloor()
+    {
+        RaycastHit hit;
+
+        Debug.DrawRay(transform.position, Vector3.down * raycastDistance, Color.red);
+
+        if (Physics.Raycast(transform.position, Vector3.down, out hit, raycastDistance))
+        {
+            if (hit.collider.gameObject.CompareTag("Avoid"))
+            {
+                Vector3 awayFromFloor = transform.position - hit.point;
+                awayFromFloor = awayFromFloor.normalized;
+
+                float distanceToFloor = hit.distance;
+
+                // Use a function of distanceToFloor to adjust avoidFloorStrength
+                float adjustedAvoidFloorStrength = avoidFloorStrength * Mathf.Pow(distanceToFloor, 2);
+
+                float deltaTimeStrength = adjustedAvoidFloorStrength * Time.deltaTime;
+                boid.velocity = boid.velocity + deltaTimeStrength * awayFromFloor / (deltaTimeStrength + 1);
+
+                boid.velocity = boid.velocity.normalized;
+            }
         }
     }
+
 }

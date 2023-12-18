@@ -546,6 +546,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   velocity: {x: 1, y: 0, z: 0}
+  minVelocity: 0
   maxVelocity: 5
   rotSpeed: 1
   id: 0
@@ -601,8 +602,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d1da86d740da74b448c839bfc9b28c8e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  radius: 50
-  boundingForce: 0.5
+  boundingBoxObject: {fileID: 0}
+  avoidFloorStrength: 1
+  raycastDistance: 1
 --- !u!54 &364780421841661695
 Rigidbody:
   m_ObjectHideFlags: 0

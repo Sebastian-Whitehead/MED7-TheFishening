@@ -3,12 +3,24 @@ using UnityEngine;
 
 public class FishAnimation : MonoBehaviour
 {
-    public GameObject leadingPoint; // The GameObject that leads the rotation
-    public float baseRotationSpeed = 1f; // Base speed of rotation
-    public float maxSwingAngle = 15f; // Maximum swing angle
-    public float accelerationSmoothingFactor = 0.05f; // Factor for smoothing the acceleration
-    public Vector3 rotationAdjustment = new Vector3(0, -90, 90); // Adjustment for the rotation
-    public float slerpSpeedFactor = 1f; // Speed factor for the Slerp function
+    [Header("Leading Point Settings")]
+    [Tooltip("The GameObject that leads the rotation")]
+    public GameObject leadingPoint;
+
+    [Tooltip("Base speed of rotation")]
+    public float baseRotationSpeed;
+
+    [Tooltip("Maximum swing angle")]
+    public float maxSwingAngle;
+
+    [Tooltip("Factor for smoothing the acceleration")]
+    public float accelerationSmoothingFactor;
+
+    [Tooltip("Adjustment for the rotation")]
+    public Vector3 rotationAdjustment;
+
+    [Tooltip("Speed factor for the Slerp function")]
+    public float slerpSpeedFactor;
 
     private Vector3 _previousPosition; // Previous position of the leading point
     private Vector3 _previousVelocity; // Previous velocity of the leading point

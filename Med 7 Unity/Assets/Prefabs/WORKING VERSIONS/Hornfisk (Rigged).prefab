@@ -48,7 +48,7 @@ MonoBehaviour:
   m_Data:
     m_ConstrainedObject: {fileID: 4256095682507421856}
     m_Source: {fileID: 1071530862896596039}
-    m_DampPosition: 0.2
+    m_DampPosition: 0.05
     m_DampRotation: 0.3
     m_MaintainAim: 1
 --- !u!1 &970376453437808681
@@ -192,6 +192,7 @@ GameObject:
   - component: {fileID: 2633878511485385206}
   - component: {fileID: 4495533909431314151}
   - component: {fileID: 9004572539337485349}
+  - component: {fileID: 7883725893852945042}
   m_Layer: 0
   m_Name: Hornfisk (Rigged)
   m_TagString: Untagged
@@ -209,7 +210,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -1, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.38, y: 0.38, z: 0.38}
   m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 8392249087664642875}
@@ -268,9 +269,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   leadingPoint: {fileID: 970376453437808681}
   baseRotationSpeed: 0.5
-  maxSwingAngle: 10
+  maxSwingAngle: 40
   accelerationSmoothingFactor: 0.1
-  rotationAdjustment: {x: 0, y: -90, z: 0}
+  rotationAdjustment: {x: 0, y: -90, z: 90}
   slerpSpeedFactor: 0.05
 --- !u!114 &2720672809340467612
 MonoBehaviour:
@@ -285,7 +286,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   velocity: {x: 1, y: 0, z: 0}
-  maxVelocity: 5
+  minVelocity: 0.1
+  maxVelocity: 1
+  slope: 0.1
   rotSpeed: 1
   id: 1
 --- !u!114 &5415626282690331240
@@ -300,7 +303,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9f972f89a6ca61b4a8ca9257f8a77fcb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  radius: 20
+  radius: 10
 --- !u!114 &1963820283730358089
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -313,7 +316,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b84847e7e96673c40b3d577012917405, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  radius: 20
+  radius: 10
 --- !u!114 &2633878511485385206
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -327,7 +330,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   radius: 2
-  repulsionForce: 0.25
+  repulsionForce: 0.5
 --- !u!114 &4495533909431314151
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -340,8 +343,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d1da86d740da74b448c839bfc9b28c8e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  radius: 50
-  boundingForce: 0.5
+  boundingBoxObject: {fileID: 0}
+  avoidFloorStrength: 0.5
+  raycastDistance: 2
 --- !u!54 &9004572539337485349
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -369,6 +373,22 @@ Rigidbody:
   m_Interpolate: 1
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &7883725893852945042
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1633810175996412522}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8b33f0bc2b78db642a758f07826d0dd0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  labels:
+  - Fish
+  useAutoLabeling: 0
+  autoLabelingSchemeType: 
 --- !u!1 &1722100157967931373
 GameObject:
   m_ObjectHideFlags: 0
@@ -448,7 +468,7 @@ MonoBehaviour:
   m_Data:
     m_ConstrainedObject: {fileID: 710205307274110677}
     m_Source: {fileID: 4256095682507421856}
-    m_DampPosition: 0.2
+    m_DampPosition: 0.05
     m_DampRotation: 0.3
     m_MaintainAim: 1
 --- !u!1 &3280259377515645449
@@ -531,7 +551,7 @@ MonoBehaviour:
   m_Data:
     m_ConstrainedObject: {fileID: 228003847459281908}
     m_Source: {fileID: 710205307274110677}
-    m_DampPosition: 0.2
+    m_DampPosition: 0.05
     m_DampRotation: 0.3
     m_MaintainAim: 1
 --- !u!1 &4130966921569578059
@@ -647,7 +667,7 @@ MonoBehaviour:
   m_Data:
     m_ConstrainedObject: {fileID: 7235491388851122775}
     m_Source: {fileID: 228003847459281908}
-    m_DampPosition: 0.2
+    m_DampPosition: 0.05
     m_DampRotation: 0.3
     m_MaintainAim: 1
 --- !u!1 &8009952759147961398
@@ -749,7 +769,7 @@ MonoBehaviour:
   m_Data:
     m_ConstrainedObject: {fileID: 1071530862896596039}
     m_Source: {fileID: 8392249087664642875}
-    m_DampPosition: 0.2
+    m_DampPosition: 0.05
     m_DampRotation: 0.3
     m_MaintainAim: 1
 --- !u!1 &9104304368986315356
