@@ -1,5 +1,5 @@
 # MED7-TheFishening
-7th Semeter medialogy project
+7th Semester Medialogy project
 
 # Data collection
 
